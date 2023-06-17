@@ -1,0 +1,146 @@
+<html lang="en">
+<body>
+    <div class="login">
+        <h1> Home Loan Approval Indicator</h1>
+
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <h1>
+                <legend> Home Loan Approval Prediction</legend>
+            </h1>
+
+            <div class="mb-3">
+                <label class="form-label">Sex</label>
+                <select class="form-control" name="Sex" placeholer="Enter your Sex" required>
+                    <option class="placeholder" selected disabled value=""> Select your Sex</option>
+                    <option value="male">
+                        male
+                    </option>
+                    <option value="female">
+                        female
+                    </option>
+                </select>
+
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input class="form-control" type ="number" name="Age" placeholer="Enter Applicant Age" min="1" max="100" />
+            
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Job</label>
+                <input class="form-control" type ="number" name="Job" placeholer="Enter Applicant Job" min="0" max="3" />
+            
+            </div>
+
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Housing</label>
+                <select class="form-control" name="Housing" placeholer="Enter your Housing status" required>
+                    <option class="placeholder" selected disabled value=""> Select your Housing status</option>
+                    <option value="own">
+                        own
+                    </option>
+                    <option value="rent">
+                        rent
+                    </option>
+                    <option value="free">
+                        free
+                    </option>
+                </select>
+    
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Saving_accounts</label>
+                <select class="form-control" name="Saving_accounts" placeholer="Enter level of saving accounts" required>
+                    <option class="placeholder" selected disabled value=""> Select Saving accounts level</option>
+                    <option value="little">
+                        little
+                    </option>
+                    <option value="moderate">
+                        moderate
+                    </option>
+                    <option value="rich">
+                        rich
+                    </option>
+                    <option value="quite rich">
+                        quite rich
+                    </option>
+                </select>
+    
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Checking_account</label>
+                <select class="form-control" name="Checking_account" placeholer="Enter your Checking_account level" required>
+                    <option class="placeholder" selected disabled value=""> Select Checking_account level</option>
+                    <option value="little">
+                        little
+                    </option>
+                    <option value="moderate">
+                        moderate
+                    </option>
+                    <option value="rich">
+                        rich
+                    </option>
+                </select>
+            </div>
+    
+    
+            <div class="mb-3">
+                <label class="form-label">Credit_amount</label>
+                <input class="form-control" type ="number" name="Credit_amount" placeholer="Enter Credit_amount" min="1" max="25000" />
+        
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-label">Duration</label>
+                <input class="form-control" type ="number" name="Duration" placeholer="Enter Duration of credit" min="1" max="72" />
+        
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Purpose</label>
+                <select class="form-control" name="Purpose" placeholer="Purpose of loan" required>
+                    <option class="placeholder" selected disabled value=""> Select Purpose of loan</option>
+                    <option value="car">
+                        car
+                    </option>
+                    <option value="radio/TV">
+                        radio/TV
+                    </option>
+                    <option value="furniture/equipment">
+                        furniture/equipment
+                    </option>
+                    <option value="business">
+                        business
+                    </option>
+                    <option value="education">
+                        education
+                    </option>
+                    <option value="repairs">
+                        repairs
+                    </option>
+                    <option value="domestic appliances">
+                        domestic appliances
+                    </option>
+                    <option value="vacation/others">
+                        vacation/others
+                    </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <input class="btn btn-primary" type ="submit" value="Predict your Credit Risk" required />
+    
+            </div>
+        </form>
+
+        <h2>
+
+            The prediction is {{results}}
+        </h2>
+    </body>
+</html>
