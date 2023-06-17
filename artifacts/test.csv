@@ -1,4 +1,4 @@
-Unnamed: 0,Age,Sex,Job,Housing,Saving accounts,Checking account,Credit amount,Duration,Purpose,Risk
+Unnamed: 0,Age,Sex,Job,Housing,Saving_accounts,Checking_account,Credit_amount,Duration,Purpose,Risk
 519,36,male,2,free,,,700,6,radio/TV,good
 837,23,female,1,rent,little,,601,4,furniture/equipment,good
 208,21,male,1,own,little,little,6568,24,business,good
