@@ -44,7 +44,39 @@ class ModelTrainer:
                 "K-nearest Classifier": KNeighborsClassifier()
             }
 
-            model_report:dict = evaluate_models(X_train=X_train, y_train=y_train,X_test=X_test,y_test=y_test, models=models)
+            params = {
+                "Decision Tree": {
+                    'criterion': ['gini', 'entropy', 'log_loss']
+                },
+
+                "Logistic Regression": {},
+
+                "Random Forest": {
+                    'criterion': ['gini', 'entropy', 'log_loss'],
+                    'max_depth': [3,4,5,6,7]
+                },
+
+                "AdaBoost": {
+                    'learning_rate': [0.1, 0.05, 0.5, 0.01]
+                },
+
+                "Gradient Boosting": {
+                    'learning_rate': [0.1, 0.01, 0.5, 0.05],
+                    'criterion': ['friedman_mse', 'squared_error']
+                },
+
+                "Support Vector Classifier": {
+                    'kernel': ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed']
+                },
+
+                "K-nearest Classifier":{
+                    'n_neighbors': [3,4,5,6,7]
+                }
+            }
+
+
+
+            model_report:dict = evaluate_models(X_train=X_train, y_train=y_train,X_test=X_test,y_test=y_test, models=models, param=params)
 
             # Best model score from dict
             best_model_score = max(sorted(model_report.values()))
