@@ -9,6 +9,15 @@ This a personal project I did for learning and understanding how to build machin
 In banks, providing credit is a tough decision. Analysing the risk regarding the sanction of credit is an important steps. If banks do so, then they could analyse the risk factors so that they slow down or resist providing bad credits.
 In this project, we will use German Credit Dataset to figure our if the credit possess risk or not. We will also automate the whole process
 
+### Deployment Figure
+
+##### Before :
+![Screenshot 2023-06-19 180553](https://github.com/Samar-Chhetri/Credit_Risk_ML_Project/assets/122675013/3953d87a-0118-444d-9cce-ec8d0c0cd672)
+
+##### After :
+![Screenshot 2023-06-19 181022](https://github.com/Samar-Chhetri/Credit_Risk_ML_Project/assets/122675013/7aa660f3-6b08-4eaa-bcc4-730c2547c9ad)
+
+
 
 # Hi, I'm Samar Chhetri! 👋
 
