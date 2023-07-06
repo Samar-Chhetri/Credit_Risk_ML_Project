@@ -1,12 +1,12 @@
 <html lang="en">
 <body>
     <div class="login">
-        <h1> Home Loan Approval Indicator</h1>
+        <h1> Credit Risk Classification Prediction</h1>
 
         <form action="{{ url_for('predict_datapoint')}}" method="post">
-            <h1>
-                <legend> Home Loan Approval Prediction</legend>
-            </h1>
+            <h2>
+                <legend> Credit Risk</legend>
+            </h2>
 
             <div class="mb-3">
                 <label class="form-label">Sex</label>
@@ -22,13 +22,13 @@
 
             <div class="mb-3">
                 <label class="form-label">Age</label>
-                <input class="form-control" type ="number" name="Age" placeholer="Enter Applicant Age" min="1" max="100" />
+                <input class="form-control" type ="number" name="Age" placeholer="Enter Applicant Age" min="1" max="100" required/>
             
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Job</label>
-                <input class="form-control" type ="number" name="Job" placeholer="Enter Applicant Job" min="0" max="3" />
+                <input class="form-control" type ="number" name="Job" placeholer="Enter Applicant Job" min="0" max="3" required/>
             
             </div>
 
@@ -90,13 +90,13 @@
     
             <div class="mb-3">
                 <label class="form-label">Credit_amount</label>
-                <input class="form-control" type ="number" name="Credit_amount" placeholer="Enter Credit_amount" min="1" max="25000" />
+                <input class="form-control" type ="number" name="Credit_amount" placeholer="Enter Credit_amount" min="1" max="25000" required/>
         
             </div>
         
             <div class="mb-3">
                 <label class="form-label">Duration</label>
-                <input class="form-control" type ="number" name="Duration" placeholer="Enter Duration of credit" min="1" max="72" />
+                <input class="form-control" type ="number" name="Duration" placeholer="Enter Duration of credit" min="1" max="72" required/>
         
             </div>
 
@@ -120,14 +120,8 @@
                     <option value="education">
                         education
                     </option>
-                    <option value="repairs">
-                        repairs
-                    </option>
-                    <option value="domestic appliances">
-                        domestic appliances
-                    </option>
-                    <option value="vacation/others">
-                        vacation/others
+                    <option value="others">
+                        others
                     </option>
                 </select>
             </div>
@@ -140,7 +134,7 @@
 
         <h2>
 
-            The prediction is {{results}}
+            Result : The credit is  {{results}}
         </h2>
     </body>
 </html>
